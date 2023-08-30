@@ -57,10 +57,24 @@ def add_guest():
     return guest_schema.jsonify(guests)
 
 @app.route('/delete/<id>/',methods = ['DELETE'])
-def delete_guest():
+def delete_guest(id):
     guest = Guests.query.get(id)
     db.session.delete(guest)
     db.session.commit()
+    return guest_schema.jsonify(guest)
+
+@app.route('/update/<id>/', methods = ['PUT'])
+def update_guest(id):
+    guest = Guests.query.get(id)
+    
+    name = request.json['name']
+    surname = request.json['surname']
+    
+    guest.name = name
+    guest.surname = surname
+
+    db.session.commit()
+    
     return guest_schema.jsonify(guest)
 
 if __name__ == '__main__':
