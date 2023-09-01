@@ -16,7 +16,7 @@ db = SQLAlchemy(app)
 mar = Marshmallow(app)
 
 
-class Guests(db.Model):
+class Gueaws_launch_configurationts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
     surname = db.Column(db.String(100))
@@ -78,6 +78,4 @@ def update_guest(id):
     return guest_schema.jsonify(guest)
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
-
+    app.run(host="0.0.0.0")
