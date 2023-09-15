@@ -1,5 +1,5 @@
 import './components/App.css';
-import { useState, useEffect } from 'react';
+import React,{ useState, useEffect } from 'react';
 import GuestList from './components/GuestList';
 import Form from './components/Form';
 
@@ -10,7 +10,7 @@ function App() {
   const [editedGuest, setEditedGuest] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:5000/get',{
+    fetch('http://ilb.local.com:5000/get',{
       'method':'GET',
       headers: {
         'Content-Type':'application/json'

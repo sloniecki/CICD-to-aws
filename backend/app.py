@@ -5,18 +5,20 @@ import datetime
 from flask_cors import CORS
 
 
+
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:milosz@localhost:3306/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://aws:12345678@db.local.com:3306'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.app_context().push()
+
 
 
 db = SQLAlchemy(app)
 mar = Marshmallow(app)
 
 
-class Gueaws_launch_configurationts(db.Model):
+class Guests(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
     surname = db.Column(db.String(100))
@@ -79,3 +81,4 @@ def update_guest(id):
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
+    
