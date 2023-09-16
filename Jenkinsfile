@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                git(url: 'https://github.com/sloniecki/project.git', branch: 'main')
+                sh 'touch testy.txt'
             }
         }
     }
