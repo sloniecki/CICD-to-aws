@@ -1,11 +1,10 @@
 pipeline {
-  agent any
-  stages {
-    stage('Git') {
-      steps {
-        git(url: 'https://github.com/sloniecki/project.git', branch: 'main')
-      }
+    agent none
+    stages {
+        stage('Example') {
+            steps {
+                git(url: 'https://github.com/sloniecki/project.git', branch: 'main')
+            }
+        }
     }
-
-  }
 }
