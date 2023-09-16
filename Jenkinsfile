@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sh 'touch testy.txt'
+                sh 'touch testy2.txt'
             }
         }
     }
