@@ -7,7 +7,7 @@ pipeline {
                 cd Terraform
                 packer build packer_web.json 2>&1 | tee outputweb.txt
                 webami=$(tail -2 outputweb.txt | head -2 | awk 'match($0, /ami-.*/) { print substr($0, RSTART, RLENGTH) }')
-                echo 'variable "ami_web" { default = "'${webami}'" } > var_ami_web.tf
+                echo 'variable "ami_web" { default = "'${webami}'" }' > var_ami_web.tf
                 '''
             }
         }
@@ -17,7 +17,7 @@ pipeline {
                 cd Terraform
                 packer build packer_api.json 2>&1 | tee outputapi.txt
                 apiami=$(tail -2 outputapi.txt | head -2 | awk 'match($0, /ami-.*/) { print substr($0, RSTART, RLENGTH) }')
-                echo 'variable "ami_app" { default = "'${apiami}'" } > var_ami_api.tf
+                echo 'variable "ami_app" { default = "'${apiami}'" }' > var_ami_api.tf
                 '''
             }
         }
