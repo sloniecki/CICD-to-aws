@@ -17,7 +17,7 @@
       },
       {
         "type": "file",
-        "source" : "../project/backend/",
+        "source" : "../var/lib/jenkins/workspace/Aws_Terraform/project/backend/",
         "destination" : "/tmp/api/"
       },
   
