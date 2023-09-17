@@ -17,7 +17,7 @@
       },
       {
         "type": "file",
-        "source" : "../var/lib/jenkins/workspace/Aws_Terraform/project/front/",
+        "source" : "../Aws_Terraform/project/front/",
         "destination" : "/tmp/web/"
       },
   
