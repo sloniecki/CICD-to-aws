@@ -3,13 +3,13 @@
 
 ## Overview
 ### This project is a CI/CD pipelinie that deploy simple 3-tier application to aws cloud
- Stack:
- Frontend: React 
- Backend: Python/flask
- Database: MySql
- CI/CD: jenkins
- Provisioning: Terraform
- Cloud:AWS
+ Stack:<br/>
+ Frontend: React <br/>
+ Backend: Python/flask<br/>
+ Database: MySql<br/>
+ CI/CD: jenkins<br/>
+ Provisioning: Terraform<br/>
+ Cloud:AWS<br/>
 
 
 
